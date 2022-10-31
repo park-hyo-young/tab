@@ -27,6 +27,14 @@
         padding-right: 150px;
         li {
             margin: 10px 5px;
+            &.active {
+                .btn {
+                    border: #eee;
+                    color: #fff;
+                    border: 1px solid #3d4aff;
+                    background-color: #3d4aff;
+                }
+            }
         }
         .btn {
             display: block;
@@ -36,13 +44,8 @@
             color: #111;
             text-align: center;
             background-color: #fff;
-            &.active {
-                border: #eee;
-                color: #fff;
-                border: 1px solid #3d4aff;
-                background-color: #3d4aff;
-            }
         }
+        
     }
     &_area {
         margin-top: 20px;

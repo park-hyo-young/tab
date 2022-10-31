@@ -1,19 +1,54 @@
 $(document).ready(function(){
+    var idx_01 = 0;
+   
     // 탭 메뉴 전환
-    $('.btn').click(function(){
-        var idx_01 = $('.btn').index(this);
-        $('.btn').removeClass('active');
-        $(this).addClass('active');
-        $('.tab_area li').css('display','none');
-        $('.tab_area li').eq(idx_01).css('display','block');
+    $('.tab_btns').find("li").on('click', function(e){
+        e.preventDefault();
+        var me = $(e.currentTarget);
+            idx_01 = me.index();
+        console.log(idx_01);
+
+        $('.tab_btns li').removeClass('active');
+        me.addClass('active');
+        
+        viewItem(idx_01);
     });
 
     // 탭메뉴 좌/우 이동
-    // $('.prev a').click(function(){
-    // });
+    $('.prev a').on('click', function(e){
+        e.preventDefault();
+        console.log(idx_01);
+        idx_01--;
+        if (idx_01 < 0) {
+            idx_01 = 0
+        }
+        viewItem(idx_01);
+        Indigate(idx_01);
+    });
+  
+    $('.next a').on('click', function(e){
+        e.preventDefault();
+        idx_01++;
+        if (idx_01 > $(".tab_btns li").length - 1) {
+            idx_01 = $(".tab_btns li").length - 1
+        }
+        viewItem(idx_01);
+        Indigate(idx_01);
+    });
 
-    // $('.next a').click(function(){
-    // });
+    function viewItem(idx_01){
+        
+        var idx_01 = idx_01;
+        $('.tab_area li').hide();
+        $('.tab_area li').eq(idx_01).show();
+    }
+    function Indigate(idx_01){
+
+        var idx_01 = idx_01;
+        $('.tab_btns li').removeClass('active');
+	    $('.tab_btns li').eq(idx_01).addClass('active');
+    }
+
 
     // 팝업창
     $('.img_box').on('click', function(e){
