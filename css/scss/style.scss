@@ -117,6 +117,11 @@ $main : #3d4aff;
             }
         }
     }
+    .prev {
+        a {
+            border-right: 0;
+        }
+    }
     .next {
         right: 0;
         a {
