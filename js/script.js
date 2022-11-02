@@ -58,15 +58,15 @@ $(document).ready(function(){
         viewItem(idx_01);
     });
     
+    function Indigate(idx_01){
+        var idx_01=idx_01;
+        $('.tab_btns li').removeClass('active');
+        $('.tab_btns li').eq(idx_01).addClass('active');
+    }
     function viewItem(idx_01){
-        var idx_01 = idx_01;
+        var idx_01=idx_01;
         $('.tab_area li').hide();
         $('.tab_area li').eq(idx_01).show();
-    }
-    function Indigate(idx_01){
-        var idx_01 = idx_01;
-        $('.tab_btns li').removeClass('active');
-	    $('.tab_btns li').eq(idx_01).addClass('active');
     }
 
     // 팝업창
