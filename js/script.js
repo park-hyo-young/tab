@@ -38,7 +38,7 @@ $(document).ready(function(){
         e.preventDefault();
         idx_01--;
         if (idx_01 < 0) {
-            idx_01 = $(".tab_btns li").length - 1
+            idx_01 = $(".tab_btns li").length - 1;
         }
         viewItem(idx_01);
         Indigate(idx_01);
@@ -47,7 +47,7 @@ $(document).ready(function(){
         e.preventDefault();
         idx_01++;
         if (idx_01 > $(".tab_btns li").length - 1) {
-            idx_01 = 0
+            idx_01 = 0;
         }
         viewItem(idx_01);
         Indigate(idx_01);
