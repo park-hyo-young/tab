@@ -20,6 +20,7 @@ $(document).ready(function(){
     //     if (idx_01 < 0) {
     //         idx_01 = 0
     //     }
+    //      console.log(idx_01);
     //     viewItem(idx_01);
     //     Indigate(idx_01);
     // });
@@ -29,6 +30,7 @@ $(document).ready(function(){
     //     if (idx_01 > $(".tab_btns li").length - 1) {
     //         idx_01 = $(".tab_btns li").length - 1
     //     }
+    //      console.log(idx_01);
     //     viewItem(idx_01);
     //     Indigate(idx_01);
     // });
@@ -40,6 +42,7 @@ $(document).ready(function(){
         if (idx_01 < 0) {
             idx_01 = $(".tab_btns li").length - 1;
         }
+        console.log(idx_01);
         viewItem(idx_01);
         Indigate(idx_01);
     });
@@ -49,6 +52,7 @@ $(document).ready(function(){
         if (idx_01 > $(".tab_btns li").length - 1) {
             idx_01 = 0;
         }
+        console.log(idx_01);
         viewItem(idx_01);
         Indigate(idx_01);
     });
