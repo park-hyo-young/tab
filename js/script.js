@@ -19,7 +19,6 @@ $(document).ready(function(){
     //     idx_01--;
     //     if (idx_01 < 0) {
     //         idx_01 = 0
-    //         // idx_01 = $(".tab_btns li").length - 1
     //     viewItem(idx_01);
     //     Indigate(idx_01);
     // });
