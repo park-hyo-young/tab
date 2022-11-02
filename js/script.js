@@ -6,7 +6,6 @@ $(document).ready(function(){
         e.preventDefault();
         var me = $(e.currentTarget);
             idx_01 = me.index();
-        console.log(idx_01);
 
         $('.tab_btns li').removeClass('active');
         me.addClass('active');
@@ -17,7 +16,6 @@ $(document).ready(function(){
     // 탭메뉴 좌/우 이동
     // $('.prev a').on('click', function(e){
     //     e.preventDefault();
-    //     console.log(idx_01);
     //     idx_01--;
     //     if (idx_01 < 0) {
     //         idx_01 = 0
@@ -28,7 +26,6 @@ $(document).ready(function(){
     // $('.next a').on('click', function(e){
     //     e.preventDefault();
     //     idx_01++;
-    //     console.log(idx_01);
     //     if (idx_01 > $(".tab_btns li").length - 1) {
     //         idx_01 = $(".tab_btns li").length - 1
     //     }
@@ -39,7 +36,6 @@ $(document).ready(function(){
     // 탭메뉴 루프
     $('.prev a').on('click', function(e){
         e.preventDefault();
-        console.log(idx_01);
         idx_01--;
         if (idx_01 < 0) {
             idx_01 = $(".tab_btns li").length - 1
@@ -50,7 +46,6 @@ $(document).ready(function(){
     $('.next a').on('click', function(e){
         e.preventDefault();
         idx_01++;
-        console.log(idx_01);
         if (idx_01 > $(".tab_btns li").length - 1) {
             idx_01 = 0
         }
