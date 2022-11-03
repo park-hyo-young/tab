@@ -74,11 +74,11 @@ $main : #3d4aff;
         }
         .text_box {
             h3 {
-                font-size: 18px;
+                font-size: 20px;
             }
             .text {
                 margin-top: 25px;
-                font-size: 15px;
+                font-size: 16px;
                 line-height: 25px;
                 word-break: keep-all;
             }
@@ -91,8 +91,8 @@ $main : #3d4aff;
             .photo_zoom {
                 display: block;
                 position: absolute;
-                right: -15px;
-                bottom: -15px;
+                right: -10px;
+                bottom: -10px;
                 img {
                     margin-left: 0;
                 }
@@ -102,24 +102,32 @@ $main : #3d4aff;
 }
 .arrows {
     position: relative;
-    
     .next, .prev {
         position: absolute;
         top: 10px;
-        right: 50px;
+        right: 45px;
         a {
             display: block;
-            width: 50px;
+            width: 45px;
             padding: 10px 0;
             border-radius: 0;
             border: 1px solid #ccc;
             background-color: #fff;
             &:hover {
-                border-color: #999;
+                border-color: #888;
             }
         }
     }
     .prev {
+        &::after {
+            position: absolute;
+            content: '';
+            width: 1px;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background-color: #ccc;
+        }
         a {
             border-right: 0;
         }
