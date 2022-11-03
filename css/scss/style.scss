@@ -21,7 +21,6 @@ $main : #3d4aff;
 .tab {
     &_header {
         display: flex;
-        align-items: start;
         justify-content: space-between;
     }
     &_btns {
@@ -49,7 +48,7 @@ $main : #3d4aff;
                 text-align: center;
                 background-color: #fff;
                 &:hover {
-                    border-color: rgba($color: $main, $alpha: .5);
+                    border-color: rgba($color: $main, $alpha: .7);
                 }
             }
         }
@@ -104,12 +103,13 @@ $main : #3d4aff;
     .next, .prev {
         position: absolute;
         top: 10px;
-        right: 45px;
+        right: 55px;
         a {
             display: block;
-            width: 45px;
-            padding: 10px 0;
-            border-radius: 0;
+            width: 40px;
+            height: 40px;
+            padding: 9px 0;
+            border-radius: 50%;
             border: 1px solid #ccc;
             background-color: #fff;
             &:hover {
@@ -117,24 +117,9 @@ $main : #3d4aff;
             }
         }
     }
-    .prev {
-        &::after {
-            position: absolute;
-            content: '';
-            width: 1px;
-            height: 100%;
-            top: 0;
-            right: 0;
-            background-color: #ccc;
-        }
-        a {
-            border-right: 0;
-        }
-    }
     .next {
         right: 0;
         a {
-            border-left: 0;
             .arrow {
                 background-position: -12px 0;
             }
