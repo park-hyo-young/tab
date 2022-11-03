@@ -6,11 +6,9 @@ $(document).ready(function(){
         e.preventDefault();
         var me = $(e.currentTarget);
             idx_01 = me.index();
-
         console.log(idx_01);
         $('.tab_btns li').removeClass('active');
         me.addClass('active');
-        
         viewItem(idx_01);
     });
 
