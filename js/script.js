@@ -1,76 +1,76 @@
 $(document).ready(function(){
-    var idx_01 = 0;
+    var index = 0;
    
     // 탭 메뉴 전환
     $('.tab_btns').find("li").on('click', function(e){
         e.preventDefault();
         var me = $(e.currentTarget);
-            idx_01 = me.index();
-        console.log(idx_01);
+            index = me.index();
+        console.log(index);
         $('.tab_btns li').removeClass('active');
         me.addClass('active');
-        viewItem(idx_01);
+        viewItem(index);
     });
 
     // 탭메뉴 좌/우 이동
     // $('.next a').on('click', function(e){
     //     e.preventDefault();
-    //     idx_01++;
-    //     if (idx_01 > $(".tab_btns li").length - 1) {
-    //         idx_01 = $(".tab_btns li").length - 1
+    //     index++ ;
+    //     if (index > $(".tab_btns li").length - 1){
+    //         index = $(".tab_btns li").length - 1
     //     }
-    //     console.log(idx_01);
-    //     Indigate(idx_01);
-    //     viewItem(idx_01);
+    //     console.log(index);
+    //     Indigate(index);
+    //     viewItem(index);
     // });
     // $('.prev a').on('click', function(e){
     //     e.preventDefault();
-    //     idx_01--;
-    //     if (idx_01 < 0) {
-    //         idx_01 = 0
+    //     index-- ;
+    //     if (index < 0){
+    //         index = 0
     //     }
-    //     console.log(idx_01);
-    //     Indigate(idx_01);
-    //     viewItem(idx_01);
+    //     console.log(index);
+    //     Indigate(index);
+    //     viewItem(index);
     // });
 
     // 탭메뉴 루프
     $('.next').on('click', function(e){
         e.preventDefault();
-        idx_01++;
-        if (idx_01 > $(".tab_btns li").length - 1) {`   `
-            idx_01 = 0;
+        index++ ;
+        if (index > $(".tab_btns li").length - 1){
+            index = 0;
         }
-        console.log(idx_01);
-        Indigate(idx_01);
-        viewItem(idx_01);
+        console.log(index);
+        Indigate(index);
+        viewItem(index);
     });
     $('.prev').on('click', function(e){
         e.preventDefault();
-        idx_01--;
-        if (idx_01 < 0) {
-            idx_01 = $(".tab_btns li").length - 1;
+        index-- ;
+        if (index < 0){
+            index = $(".tab_btns li").length - 1;
         }
-        console.log(idx_01);
-        Indigate(idx_01);
-        viewItem(idx_01);
+        console.log(index);
+        Indigate(index);
+        viewItem(index);
     });
     
-    function Indigate(idx_01){
-        var idx_01=idx_01;
+    function Indigate(index){
+        var index=index;
         $('.tab_btns li').removeClass('active');
-        $('.tab_btns li').eq(idx_01).addClass('active');
+        $('.tab_btns li').eq(index).addClass('active');
     }
-    function viewItem(idx_01){
-        var idx_01=idx_01;
+    function viewItem(index){
+        var index=index;
         $('.tab_area li').hide();
-        $('.tab_area li').eq(idx_01).show();
+        $('.tab_area li').eq(index).show();
     }
 
     // 팝업창
     $('.photo_zoom ').on('click', function(e){
-        var idx_02 = $('.photo_zoom').index(this);
-        var num = idx_02 + 1;
+        var photo = $('.photo_zoom').index(this);
+        var num = photo + 1;
 		e.preventDefault();
         $(".popup").stop().show(100);
         $(".popup_wrap figure img").remove();
