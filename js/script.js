@@ -1,70 +1,70 @@
 $(document).ready(function(){
-    var index = 0;
+    var idx = 0;
    
     // 탭 메뉴 전환
     $('.tab_btns').find("li").on('click', function(e){
         e.preventDefault();
         var me = $(e.currentTarget);
-            index = me.index();
-        console.log(index);
+            idx = me.index();
+        console.log(idx);
         $('.tab_btns li').removeClass('active');
         me.addClass('active');
-        viewItem(index);
+        viewItem(idx);
     });
 
     // 탭메뉴 좌/우 이동
     // $('.next a').on('click', function(e){
     //     e.preventDefault();
-    //     index++;
-    //     if (index > $(".tab_btns li").length - 1){
-    //         index = $(".tab_btns li").length - 1
+    //     idx++ ;
+    //     if (idx > $(".tab_btns li").length - 1){
+    //         idx = $(".tab_btns li").length - 1
     //     }
-    //     console.log(index);
-    //     Indigate(index);
-    //     viewItem(index);
+    //     console.log(idx);
+    //     Indigate(idx);
+    //     viewItem(idx);
     // });
     // $('.prev a').on('click', function(e){
     //     e.preventDefault();
-    //     index--;
-    //     if (index < 0){
-    //         index = 0
+    //     idx-- ;
+    //     if (idx < 0){
+    //         idx = 0
     //     }
-    //     console.log(index);
-    //     Indigate(index);
-    //     viewItem(index);
+    //     console.log(idx);
+    //     Indigate(idx);
+    //     viewItem(idx);
     // });
 
     // 탭메뉴 루프
     $('.next').on('click', function(e){
         e.preventDefault();
-        index++;
-        if (index > $(".tab_btns li").length - 1){
-            index = 0;
+        idx++ ;
+        if (idx > $(".tab_btns li").length - 1){
+            idx = 0;
         }
-        console.log(index);
-        Indigate(index);
-        viewItem(index);
+        console.log(idx);
+        Indigate(idx);
+        viewItem(idx);
     });
     $('.prev').on('click', function(e){
         e.preventDefault();
-        index--;
-        if (index < 0){
-            index = $(".tab_btns li").length - 1;
+        idx-- ;
+        if (idx < 0){
+            idx = $(".tab_btns li").length - 1;
         }
-        console.log(index);
-        Indigate(index);
-        viewItem(index);
+        console.log(idx);
+        Indigate(idx);
+        viewItem(idx);
     });
     
-    function Indigate(index){
-        var index = index;
+    function Indigate(idx){
+        var idx=idx;
         $('.tab_btns li').removeClass('active');
-        $('.tab_btns li').eq(index).addClass('active');
+        $('.tab_btns li').eq(idx).addClass('active');
     }
-    function viewItem(index){
-        var index = index;
+    function viewItem(idx){
+        var idx=idx;
         $('.tab_area li').hide();
-        $('.tab_area li').eq(index).show();
+        $('.tab_area li').eq(idx).show();
     }
 
     // 팝업창
