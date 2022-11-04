@@ -4,11 +4,12 @@ $(document).ready(function(){
     // 탭 메뉴 전환
     $('.tab_btns').find("li").on('click', function(e){
         e.preventDefault();
-        var me = $(e.currentTarget);
-            idx = me.index();
+        // var me = $(e.currentTarget);
+        var me = $(this).index();
+            idx = me;
         console.log(idx);
         $('.tab_btns li').removeClass('active');
-        me.addClass('active');
+        $(this).addClass('active');
         viewItem(idx);
     });
 
@@ -39,7 +40,7 @@ $(document).ready(function(){
         e.preventDefault();
         idx++ ;
         if (idx > $(".tab_btns li").length - 1){
-            idx = 0;
+            idx = 0;            
         }
         console.log(idx);
         Indigate(idx);
@@ -69,15 +70,16 @@ $(document).ready(function(){
 
     // 팝업창
     $('.photo_zoom ').on('click', function(e){
+		e.preventDefault();
+
         var photo = $('.photo_zoom').index(this);
         var num = photo + 1;
-		e.preventDefault();
-        $(".popup").stop().show(100);
+        $(".popup").show(100);
         $(".popup_wrap figure img").remove();
-		$(".popup_wrap figure").prepend('<img src="images/img_EDMS_func_' + num + '_big.jpg">');
+		$(".popup_wrap figure").prepend('<img src="images/img_EDMS_func_' + num + '_big.jpg" alt="' + num + '번째 탭 내용 큰 이미지">');
     });
     $('.popup_close').on('click', function(e){
 		e.preventDefault();
-        $(".popup").stop().hide(100);
+        $(".popup").hide(100);
     })
 });
