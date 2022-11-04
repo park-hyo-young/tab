@@ -44,11 +44,10 @@ $main : #3d4aff;
                 padding: 10px 20px;
                 border: 1px solid #ccc;
                 border-radius: 50px;
-                color: #111;
                 text-align: center;
                 background-color: #fff;
                 &:hover {
-                    border-color: rgba($color: $main, $alpha: .4);
+                    border-color: rgba($color: $main, $alpha: .6);
                 }
             }
         }
