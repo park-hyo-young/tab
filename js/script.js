@@ -15,7 +15,7 @@ $(document).ready(function(){
     // 탭메뉴 좌/우 이동
     // $('.next a').on('click', function(e){
     //     e.preventDefault();
-    //     index++ ;
+    //     index++;
     //     if (index > $(".tab_btns li").length - 1){
     //         index = $(".tab_btns li").length - 1
     //     }
@@ -25,7 +25,7 @@ $(document).ready(function(){
     // });
     // $('.prev a').on('click', function(e){
     //     e.preventDefault();
-    //     index-- ;
+    //     index--;
     //     if (index < 0){
     //         index = 0
     //     }
@@ -37,7 +37,7 @@ $(document).ready(function(){
     // 탭메뉴 루프
     $('.next').on('click', function(e){
         e.preventDefault();
-        index++ ;
+        index++;
         if (index > $(".tab_btns li").length - 1){
             index = 0;
         }
@@ -47,7 +47,7 @@ $(document).ready(function(){
     });
     $('.prev').on('click', function(e){
         e.preventDefault();
-        index-- ;
+        index--;
         if (index < 0){
             index = $(".tab_btns li").length - 1;
         }
@@ -57,12 +57,12 @@ $(document).ready(function(){
     });
     
     function Indigate(index){
-        var index=index;
+        var index = index;
         $('.tab_btns li').removeClass('active');
         $('.tab_btns li').eq(index).addClass('active');
     }
     function viewItem(index){
-        var index=index;
+        var index = index;
         $('.tab_area li').hide();
         $('.tab_area li').eq(index).show();
     }
