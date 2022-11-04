@@ -61,7 +61,7 @@ $main : #3d4aff;
         background-color: #fff;
         li {
             display: none;
-            &.active {
+            &:first-child {
                 display: block;
             }
         }

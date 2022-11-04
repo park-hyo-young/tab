@@ -38,7 +38,7 @@ $(document).ready(function(){
     $('.next').on('click', function(e){
         e.preventDefault();
         idx_01++;
-        if (idx_01 > $(".tab_btns li").length - 1) {
+        if (idx_01 > $(".tab_btns li").length - 1) {`   `
             idx_01 = 0;
         }
         console.log(idx_01);
@@ -68,8 +68,8 @@ $(document).ready(function(){
     }
 
     // 팝업창
-    $('.img_box').on('click', function(e){
-        var idx_02 = $('.img_box').index(this);
+    $('.photo_zoom ').on('click', function(e){
+        var idx_02 = $('.photo_zoom').index(this);
         var num = idx_02 + 1;
 		e.preventDefault();
         $(".popup").stop().show(100);
