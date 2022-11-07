@@ -23,6 +23,7 @@ $main : #3d4aff;
     align-items: center;
     justify-content: start;
     width: 400px;
+    padding: 0 10px;
     margin-bottom: 20px;
     background-color: #fff;
     a {
@@ -34,10 +35,6 @@ $main : #3d4aff;
             font-weight: bold;
         }
     }
-}
-&::before {
-    position: absolute;
-    content: '';
 }
 .tab_style_0 {
     &1 {
@@ -75,6 +72,8 @@ $main : #3d4aff;
                     position: relative;
                     color: $main;
                     &::before {
+                        position: absolute;
+                        content: '';
                         width: 100%;
                         height: 4px;
                         left: 0;
@@ -93,6 +92,8 @@ $main : #3d4aff;
                     color: $main;
                     background: linear-gradient(#cfd2ff, #fff);
                     &::before {
+                        position: absolute;
+                        content: '';
                         width: 100%;
                         height: 4px;
                         left: 0;
@@ -129,7 +130,6 @@ $main : #3d4aff;
         }
     }
     &7 {
-        padding: 5px 0;
         border-radius: 10px;
         .active {
             border-radius: 10px;
@@ -138,6 +138,8 @@ $main : #3d4aff;
                 position: relative;
                 color: $main;
                 &::before {
+                    position: absolute;
+                    content: '';
                     width: 40%;
                     height: 4px;
                     bottom: 5px;
@@ -153,6 +155,8 @@ $main : #3d4aff;
         .active {
             position: relative;
             &::before {
+                position: absolute;
+                content: '';
                 width: 20px;
                 height: 20px;
                 bottom: -10px;
@@ -160,16 +164,6 @@ $main : #3d4aff;
                 border-radius: 5px 0;
                 transform: translateX(-50%) rotate(45deg);
                 background-color: #eef;
-            }
-            a {
-                position: relative;
-                &::before {
-                    width: 10px;
-                    height: 10px;
-                    border-radius: 50%;
-                    background-color: red;
-                    // background-color: #fff;
-                }
             }
         }
     }
