@@ -22,11 +22,17 @@ $main : #3d4aff;
     display: flex;
     align-items: center;
     justify-content: start;
+    width: 375px;
     margin-bottom: 20px;
     background-color: #fff;
     a {
         display: block;
         padding: 20px 30px;
+    }
+    .active {
+        a {
+            font-weight: bold;
+        }
     }
 }
 .tab_style_0 {
@@ -48,7 +54,6 @@ $main : #3d4aff;
         .active {
             a {
                 color: $main;
-                font-weight: bold;
             }
         }
         li {
@@ -65,7 +70,6 @@ $main : #3d4aff;
                 a {
                     position: relative;
                     color: $main;
-                    font-weight: bold;
                     &::before {
                         position: absolute;
                         content: '';
@@ -85,7 +89,6 @@ $main : #3d4aff;
                 a {
                     position: relative;
                     color: $main;
-                    font-weight: bold;
                     background: linear-gradient(#cfd2ff, #fff);
                     &::before {
                         position: absolute;
@@ -122,6 +125,45 @@ $main : #3d4aff;
             background-color: $main;
             a {
                 color: #fff;
+            }
+        }
+    }
+    &7 {
+        padding: 5px 0;
+        border-radius: 10px;
+        .active {
+            border-radius: 10px;
+            background-color: rgba($color: $main, $alpha: .2);
+            a {
+                position: relative;
+                color: $main;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 40%;
+                    height: 4px;
+                    bottom: 5px;
+                    left: 50%;
+                    border-radius: 50px;
+                    transform: translateX(-50%);
+                    background-color: $main;
+                }
+            }
+        }
+    }
+    &8 {
+        .active {
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 20px;
+                height: 20px;
+                bottom: -10px;
+                left: 50%;
+                border-radius: 5px 0;
+                transform: translateX(-50%) rotate(45deg);
+                background-color: #eef;
             }
         }
     }
