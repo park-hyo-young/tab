@@ -14,17 +14,22 @@ $main : #3d4aff;
     background-color: #eef;
 }
 .inner {
-    position: relative;
-    width: 1200px;
-    border-radius: 20px;
-}
-.tab {
     display: flex;
     align-items: center;
-    justify-content: start;
-    padding: 0 10px;
-    margin-bottom: 20px;
-    background-color: #fff;
+    justify-content: space-between;
+    position: relative;
+    max-height: 700px;
+    border-radius: 20px;
+}
+.tab_01 {
+    .tab {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        padding: 0 10px;
+        margin: 0 10px 20px;
+        background-color: #fff;
+    }
     a {
         display: block;
         padding: 20px 30px;
@@ -34,158 +39,158 @@ $main : #3d4aff;
             font-weight: bold;
         }
     }
-}
-.tab_style_0 {
-    &1 {
-        li {
-            border-bottom: 1px solid #999;
-            border-radius: 5px 5px 0 0;
-            &.active {
-                border: 1px solid;
-                border-color: #999 #999 #fff;
-                background-color: #fff;
-            }
-            a {
-                margin-bottom: -1px;
-            }
-        }
-    }
-    &2 {
-        .active {
-            a {
-                color: $main;
-            }
-        }
-        li {
-            &:hover {
+    .tab_style_0 {
+        &1 {
+            li {
+                border-bottom: 1px solid #999;
+                border-radius: 5px 5px 0 0;
+                &.active {
+                    border: 1px solid;
+                    border-color: #999 #999 #fff;
+                    background-color: #fff;
+                }
                 a {
-                    color: rgba($color: $main, $alpha: .7);
+                    margin-bottom: -1px;
                 }
             }
         }
-    }
-    &3 {
-        li {
-            &.active {
+        &2 {
+            .active {
                 a {
-                    position: relative;
                     color: $main;
-                    &::before {
-                        position: absolute;
-                        content: '';
-                        width: 100%;
-                        height: 4px;
-                        left: 0;
-                        bottom: 0;
-                        background-color: $main;
+                }
+            }
+            li {
+                &:hover {
+                    a {
+                        color: rgba($color: $main, $alpha: .7);
                     }
                 }
             }
         }
-    }
-    &4 {
-        li {
-            &.active {
-                a {
-                    position: relative;
-                    color: $main;
-                    // background: linear-gradient(#cfd2ff, #fff);
-                    background: radial-gradient(#cfd2ff, #fff);;
-                    &::before {
-                        position: absolute;
-                        content: '';
-                        width: 100%;
-                        height: 4px;
-                        left: 0;
-                        top: 0;
-                        background-color: $main;
+        &3 {
+            li {
+                &.active {
+                    a {
+                        position: relative;
+                        color: $main;
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            width: 100%;
+                            height: 4px;
+                            left: 0;
+                            bottom: 0;
+                            background-color: $main;
+                        }
                     }
                 }
             }
         }
-    }
-    &5 {
-        border-radius: 50px;
-        .active {
+        &4 {
+            li {
+                &.active {
+                    a {
+                        position: relative;
+                        color: $main;
+                        // background: linear-gradient(#cfd2ff, #fff);
+                        background: radial-gradient(#cfd2ff, #fff);;
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            width: 100%;
+                            height: 4px;
+                            left: 0;
+                            top: 0;
+                            background-color: $main;
+                        }
+                    }
+                }
+            }
+        }
+        &5 {
             border-radius: 50px;
-            background-color: $main;
-            a {
-                color: #fff;
+            .active {
+                border-radius: 50px;
+                background-color: $main;
+                a {
+                    color: #fff;
+                }
             }
         }
-    }
-    &6 {
-        border-radius: 50px;
-        .active {
-            &:first-child {
-                border-radius: 50px 0 0 50px;
-            }
-            &:last-child {
-                border-radius: 0 50px 50px 0;
-            }
-            background-color: $main;
-            a {
-                color: #fff;
+        &6 {
+            border-radius: 50px;
+            .active {
+                &:first-child {
+                    border-radius: 50px 0 0 50px;
+                }
+                &:last-child {
+                    border-radius: 0 50px 50px 0;
+                }
+                background-color: $main;
+                a {
+                    color: #fff;
+                }
             }
         }
-    }
-    &7 {
-        border-radius: 10px;
-        .active {
+        &7 {
             border-radius: 10px;
-            background-color: rgba($color: $main, $alpha: .2);
-            a {
+            .active {
+                border-radius: 10px;
+                background-color: rgba($color: $main, $alpha: .2);
+                a {
+                    position: relative;
+                    color: $main;
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        width: 40%;
+                        height: 4px;
+                        bottom: 5px;
+                        left: 50%;
+                        border-radius: 50px;
+                        transform: translateX(-50%);
+                        background-color: $main;
+                    }
+                }
+            }
+        }
+        &8 {
+            .active {
                 position: relative;
-                color: $main;
                 &::before {
                     position: absolute;
                     content: '';
-                    width: 40%;
-                    height: 4px;
-                    bottom: 5px;
+                    width: 20px;
+                    height: 20px;
+                    bottom: -10px;
                     left: 50%;
-                    border-radius: 50px;
-                    transform: translateX(-50%);
-                    background-color: $main;
+                    border-radius: 5px 0;
+                    transform: translateX(-50%) rotate(45deg);
+                    background-color: #eef;
+                }
+                a {
+                    color: $main;
                 }
             }
         }
-    }
-    &8 {
-        .active {
-            position: relative;
-            &::before {
-                position: absolute;
-                content: '';
-                width: 20px;
-                height: 20px;
-                bottom: -10px;
-                left: 50%;
-                border-radius: 5px 0;
-                transform: translateX(-50%) rotate(45deg);
-                background-color: #eef;
-            }
-            a {
-                color: $main;
-            }
-        }
-    }
-    &9 {
-        .active {
-            position: relative;
-            &::before {
-                position: absolute;
-                content: '';
-                width: 20px;
-                height: 20px;
-                bottom: -10px;
-                left: 50%;
-                border-radius: 5px 0;
-                transform: translateX(-50%) rotate(45deg);
-                background-color: #fff;
-            }
-            a {
-                color: $main;
+        &9 {
+            .active {
+                position: relative;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    bottom: -10px;
+                    left: 50%;
+                    border-radius: 5px 0;
+                    transform: translateX(-50%) rotate(45deg);
+                    background-color: #fff;
+                }
+                a {
+                    color: $main;
+                }
             }
         }
     }
