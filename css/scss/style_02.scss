@@ -22,7 +22,6 @@ $main : #3d4aff;
     display: flex;
     align-items: center;
     justify-content: start;
-    width: 400px;
     padding: 0 10px;
     margin-bottom: 20px;
     background-color: #fff;
@@ -90,7 +89,8 @@ $main : #3d4aff;
                 a {
                     position: relative;
                     color: $main;
-                    background: linear-gradient(#cfd2ff, #fff);
+                    // background: linear-gradient(#cfd2ff, #fff);
+                    background: radial-gradient(#cfd2ff, #fff);;
                     &::before {
                         position: absolute;
                         content: '';
@@ -164,6 +164,28 @@ $main : #3d4aff;
                 border-radius: 5px 0;
                 transform: translateX(-50%) rotate(45deg);
                 background-color: #eef;
+            }
+            a {
+                color: $main;
+            }
+        }
+    }
+    &9 {
+        .active {
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 20px;
+                height: 20px;
+                bottom: -10px;
+                left: 50%;
+                border-radius: 5px 0;
+                transform: translateX(-50%) rotate(45deg);
+                background-color: #fff;
+            }
+            a {
+                color: $main;
             }
         }
     }
