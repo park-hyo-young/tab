@@ -8,9 +8,9 @@ $main : #3d4aff;
 
 .wrap {
     display: flex;
+    height: 100vh;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     background-color: #eef;
 }
 .inner {
@@ -190,6 +190,39 @@ $main : #3d4aff;
                 }
                 a {
                     color: $main;
+                }
+            }
+        }
+    }
+}
+.tab_02 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .tab {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 120px;
+        padding: 0 10px;
+        margin: 0 10px 20px;
+        background-color: #fff;
+    }
+    a {
+        display: block;
+        padding: 20px 30px;
+    }
+    .active {
+        a {
+            font-weight: bold;
+        }
+    }
+    .tab_style_0 {
+        &1 {
+            .active {
+                background-color: $main;
+                a {
+                    color: #fff;
                 }
             }
         }
